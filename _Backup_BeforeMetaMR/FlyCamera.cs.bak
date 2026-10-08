@@ -1,0 +1,38 @@
+using UnityEngine;
+
+// Simple fly camera: hold right mouse to look, WASD to move, Q/E down/up, Shift to go faster.
+public class FlyCamera : MonoBehaviour
+{
+    public float speed = 1.5f;
+    public float fastMultiplier = 3f;
+    public float lookSensitivity = 3f;
+    float yaw, pitch;
+
+    void Start()
+    {
+        var e = transform.eulerAngles;
+        yaw = e.y;
+        pitch = e.x > 180f ? e.x - 360f : e.x;
+    }
+
+    void Update()
+    {
+#if ENABLE_LEGACY_INPUT_MANAGER
+        if (Input.GetMouseButton(1))
+        {
+            yaw += Input.GetAxis("Mouse X") * lookSensitivity;
+            pitch = Mathf.Clamp(pitch - Input.GetAxis("Mouse Y") * lookSensitivity, -89f, 89f);
+            transform.rotation = Quaternion.Euler(pitch, yaw, 0f);
+        }
+        Vector3 d = Vector3.zero;
+        if (Input.GetKey(KeyCode.W)) d += transform.forward;
+        if (Input.GetKey(KeyCode.S)) d -= transform.forward;
+        if (Input.GetKey(KeyCode.D)) d += transform.right;
+        if (Input.GetKey(KeyCode.A)) d -= transform.right;
+        if (Input.GetKey(KeyCode.E)) d += Vector3.up;
+        if (Input.GetKey(KeyCode.Q)) d -= Vector3.up;
+        float s = speed * (Input.GetKey(KeyCode.LeftShift) ? fastMultiplier : 1f);
+        transform.position += d.normalized * s * Time.deltaTime;
+#endif
+    }
+}

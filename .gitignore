@@ -1,0 +1,64 @@
+# ===========================================================================================================
+# Unity: folders Unity regenerates when the project is opened (never commit these)
+# ===========================================================================================================
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/.utmp/
+
+# Builds and packages (the Quest APK is ~390 MB, over GitHub's 100 MB file limit)
+*.apk
+*.aab
+*.unitypackage
+*_BurstDebugInformation_DoNotShip/
+
+# IDE / OS files
+.vs/
+.vscode/
+.idea/
+.gradle/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+crashlytics-buildid.txt
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Asset .meta files are always committed (they hold the GUIDs scenes use to reference assets)
+!/[Aa]ssets/**/*.meta
+
+# ===========================================================================================================
+# Over GitHub's 100 MB file limit - and regenerated automatically, so nothing is lost:
+# Meta Avatars SDK preset avatars (944 MB; PresetAvatars_Quest.zip alone is 161 MB). The first time the project
+# is opened, the Avatars SDK copies them out of the com.meta.xr.sdk.avatars.sample.assets package and packages
+# the PresetAvatars_*.zip files again. No scene or prefab references these files by GUID (only by name).
+# ===========================================================================================================
+/[Aa]ssets/Oculus/Avatar2_SampleAssets/
+/[Aa]ssets/Oculus/Avatar2_SampleAssets.meta
+
+# The Avatars SDK copies the preset zips into StreamingAssets only while building and removes them afterwards
+/[Aa]ssets/StreamingAssets/SampleAssets/
+/[Aa]ssets/StreamingAssets/SampleAssets.meta

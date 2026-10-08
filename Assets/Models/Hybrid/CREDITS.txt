@@ -1,0 +1,15 @@
+Hybrid room - asset credits
+===========================
+Built from the lab scan: positions/sizes of all furniture and props, carpet and oak textures,
+posters, whiteboard, sign and screen images (taken from the photogrammetry scan itself).
+Procedural (made for this project): room shell, window, desks, sofa, armchair, sideboard, shelf unit,
+TV, monitors, keyboards, laptops, bottles, cans, mugs, coat stand, mushroom-mug lamp.
+
+Third-party models:
+- Office chair - Sara Vieira, via pmndrs/market (market.pmnd.rs) - CC0
+- Aloe plant (shelf succulent) - Sara Vieira, via pmndrs/market - CC0
+- Glass Vase with Flowers - Khronos glTF Sample Assets (Wayfair) - CC0 1.0
+- Water Bottle - Khronos glTF Sample Assets - CC0 1.0
+- Diffuse Transmission Plant (potted plants) - Khronos glTF Sample Assets - CC BY 4.0
+  https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/DiffuseTransmissionPlant
+  (CC BY 4.0: keep this credit if you publish or share the project)

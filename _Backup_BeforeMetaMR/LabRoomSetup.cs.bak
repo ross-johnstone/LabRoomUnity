@@ -1,0 +1,233 @@
+// Builds the "LabRoom_Overlay" scene the first time the project is opened.
+// Re-run any time from the menu: Lab Room > Rebuild Overlay Scene
+using System;
+using System.IO;
+using UnityEditor;
+using UnityEditor.SceneManagement;
+using UnityEngine;
+using UnityEngine.Rendering;
+
+[InitializeOnLoad]
+public static class LabRoomSetup
+{
+    public const string ScanPath = "Assets/Models/lab_room_scan_aligned.fbx";
+    public const string BlockoutPath = "Assets/Models/lab_room_blockout.fbx";
+    public const string TexPath = "Assets/Models/lab_room_scan_diffuse.png";
+    const string ScenePath = "Assets/Scenes/LabRoom_Overlay.unity";
+    const long ScanBytes = 46440364;
+    const string TexSourceName = "lab_room_u1_v1_diffuse.png";
+    const string TexSourceAbsolute = @"C:\Users\rojo9\Desktop\lab 3d model\lab_room_u1_v1_diffuse.png";
+
+    static LabRoomSetup()
+    {
+        if (File.Exists(ScenePath)) return;
+        EditorApplication.delayCall += () => Run();
+    }
+
+    [MenuItem("Lab Room/Rebuild Overlay Scene")]
+    public static void Run()
+    {
+        try
+        {
+            string root = Directory.GetParent(Application.dataPath).FullName;
+            bool changed = false;
+
+            // 1) Re-assemble the detailed scan from its parts (it was split to get it onto disk).
+            string scanFull = Path.Combine(root, ScanPath);
+            if (!File.Exists(scanFull) || new FileInfo(scanFull).Length != ScanBytes)
+            {
+                string partsDir = Path.Combine(root, "ImportParts");
+                string[] parts = Directory.GetFiles(partsDir, "lab_room_scan_aligned.fbx.part*");
+                Array.Sort(parts, StringComparer.Ordinal);
+                Directory.CreateDirectory(Path.GetDirectoryName(scanFull));
+                using (var output = File.Create(scanFull))
+                    foreach (var p in parts)
+                        using (var input = File.OpenRead(p)) input.CopyTo(output);
+                long len = new FileInfo(scanFull).Length;
+                if (len != ScanBytes)
+                {
+                    Debug.LogError($"[LabRoom] Scan re-assembly size mismatch ({len} vs {ScanBytes} bytes).");
+                    return;
+                }
+                Debug.Log("[LabRoom] Detailed scan re-assembled.");
+                changed = true;
+            }
+
+            // 2) Copy the scan's colour texture in from the 'lab 3d model' folder.
+            string texFull = Path.Combine(root, TexPath);
+            if (!File.Exists(texFull))
+            {
+                string src = Path.Combine(Directory.GetParent(root).FullName, TexSourceName);
+                if (!File.Exists(src)) src = TexSourceAbsolute;
+                if (File.Exists(src)) { File.Copy(src, texFull); changed = true; }
+                else Debug.LogWarning("[LabRoom] Scan texture not found next to the project; the scan will be untextured. Copy "
+                                      + TexSourceName + " to " + TexPath + " and run Lab Room > Rebuild Overlay Scene.");
+            }
+
+            if (changed)
+            {
+                EditorUtility.DisplayProgressBar("Lab Room", "Importing the detailed scan (this can take a minute)...", 0.5f);
+                AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
+            }
+            BuildScene();
+        }
+        catch (Exception e) { Debug.LogException(e); }
+        finally { EditorUtility.ClearProgressBar(); }
+    }
+
+    static void EnsureFolder(string parent, string name)
+    {
+        if (!AssetDatabase.IsValidFolder(parent + "/" + name)) AssetDatabase.CreateFolder(parent, name);
+    }
+
+    static Material GetOrCreateMat(string path, Shader shader)
+    {
+        var m = AssetDatabase.LoadAssetAtPath<Material>(path);
+        if (m == null) { m = new Material(shader); AssetDatabase.CreateAsset(m, path); }
+        else m.shader = shader;
+        return m;
+    }
+
+    static void MakeFade(Material m)
+    {
+        m.SetFloat("_Mode", 2f);
+        m.SetOverrideTag("RenderType", "Transparent");
+        m.SetInt("_SrcBlend", (int)BlendMode.SrcAlpha);
+        m.SetInt("_DstBlend", (int)BlendMode.OneMinusSrcAlpha);
+        m.SetInt("_ZWrite", 0);
+        m.DisableKeyword("_ALPHATEST_ON");
+        m.EnableKeyword("_ALPHABLEND_ON");
+        m.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+        m.renderQueue = (int)RenderQueue.Transparent;
+    }
+
+    static void SetAllMaterials(GameObject go, Material mat)
+    {
+        foreach (var r in go.GetComponentsInChildren<Renderer>(true))
+        {
+            var mats = new Material[Mathf.Max(1, r.sharedMaterials.Length)];
+            for (int i = 0; i < mats.Length; i++) mats[i] = mat;
+            r.sharedMaterials = mats;
+        }
+    }
+
+    static void BuildScene()
+    {
+        var scanAsset = AssetDatabase.LoadAssetAtPath<GameObject>(ScanPath);
+        var blockoutAsset = AssetDatabase.LoadAssetAtPath<GameObject>(BlockoutPath);
+        if (scanAsset == null || blockoutAsset == null)
+        {
+            Debug.LogError("[LabRoom] Could not load the models from Assets/Models.");
+            return;
+        }
+
+        EnsureFolder("Assets", "Materials");
+        EnsureFolder("Assets", "Scenes");
+
+        // Photogrammetry already has lighting baked into its texture, so show it unlit.
+        var unlit = Shader.Find("Unlit/Texture") ?? Shader.Find("Standard");
+        var scanMat = GetOrCreateMat("Assets/Materials/Scan_Unlit.mat", unlit);
+        var tex = AssetDatabase.LoadAssetAtPath<Texture2D>(TexPath);
+        if (tex != null) scanMat.mainTexture = tex;
+
+        var blockoutMat = GetOrCreateMat("Assets/Materials/Blockout_White.mat", Shader.Find("Standard"));
+        blockoutMat.color = Color.white;
+        blockoutMat.SetFloat("_Glossiness", 0.1f);
+        MakeFade(blockoutMat);
+        EditorUtility.SetDirty(scanMat);
+        EditorUtility.SetDirty(blockoutMat);
+        AssetDatabase.SaveAssets();
+
+        var scene = EditorSceneManager.NewScene(NewSceneSetup.DefaultGameObjects, NewSceneMode.Single);
+        var root = new GameObject("LabRoom");
+
+        var scan = (GameObject)PrefabUtility.InstantiatePrefab(scanAsset);
+        scan.name = "Scan_Detailed";
+        scan.transform.SetParent(root.transform, false);
+        SetAllMaterials(scan, scanMat);
+
+        var blockout = (GameObject)PrefabUtility.InstantiatePrefab(blockoutAsset);
+        blockout.name = "Blockout";
+        blockout.transform.SetParent(root.transform, false);
+        SetAllMaterials(blockout, blockoutMat);
+        foreach (var mf in blockout.GetComponentsInChildren<MeshFilter>(true))
+        {
+            var mc = mf.gameObject.AddComponent<MeshCollider>();
+            mc.sharedMesh = mf.sharedMesh;
+            if (mf.gameObject.name.StartsWith("Ceiling")) mf.gameObject.SetActive(false); // hidden so you can look in from above
+        }
+
+        var overlay = root.AddComponent<LabRoomOverlay>();
+        overlay.scan = scan;
+        overlay.blockout = blockout;
+
+        // Put the camera inside the room at eye height.
+        var b = new Bounds(blockout.transform.position, Vector3.zero);
+        foreach (var r in blockout.GetComponentsInChildren<Renderer>()) b.Encapsulate(r.bounds);
+        var camGo = GameObject.Find("Main Camera");
+        if (camGo != null)
+        {
+            camGo.transform.position = new Vector3(b.center.x, 1.6f, b.center.z);
+            camGo.transform.rotation = Quaternion.identity;
+            var cam = camGo.GetComponent<Camera>();
+            cam.nearClipPlane = 0.05f;
+            cam.fieldOfView = 70f;
+            camGo.AddComponent<FlyCamera>();
+        }
+
+        EditorSceneManager.SaveScene(scene, ScenePath);
+        EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(ScenePath, true) };
+        Selection.activeGameObject = root;
+        if (SceneView.lastActiveSceneView != null) SceneView.lastActiveSceneView.FrameSelected();
+        Debug.Log("[LabRoom] Overlay scene built: " + ScenePath + ". Press Play, hold right-mouse + WASD to fly around.");
+    }
+}
+
+// Import settings for the two models and the 8K scan texture.
+public class LabRoomImportSettings : AssetPostprocessor
+{
+    void OnPreprocessModel()
+    {
+        if (!assetPath.StartsWith("Assets/Models/")) return;
+        var mi = (ModelImporter)assetImporter;
+        if (assetPath.StartsWith("Assets/Models/Hybrid/"))
+        {
+            // keep the material slots (matched by name in LabRoomHybridSetup), but don't let Unity build its own
+            mi.materialImportMode = ModelImporterMaterialImportMode.ImportStandard;
+            mi.materialName = ModelImporterMaterialName.BasedOnMaterialName;
+            mi.materialSearch = ModelImporterMaterialSearch.Local;
+            mi.importAnimation = false; mi.importCameras = false; mi.importLights = false;
+            mi.indexFormat = ModelImporterIndexFormat.Auto;
+            mi.meshCompression = ModelImporterMeshCompression.Off;
+            return;
+        }
+        mi.materialImportMode = ModelImporterMaterialImportMode.None; // materials are assigned by LabRoomSetup
+        mi.importAnimation = false;
+        mi.importCameras = false;
+        mi.importLights = false;
+        mi.indexFormat = ModelImporterIndexFormat.Auto;               // scan has >65k vertices
+        mi.meshCompression = ModelImporterMeshCompression.Off;
+        mi.isReadable = assetPath == LabRoomSetup.BlockoutPath;       // blockout gets mesh colliders
+    }
+
+    void OnPreprocessTexture()
+    {
+        if (assetPath.StartsWith("Assets/Models/Hybrid/Textures/"))
+        {
+            var t = (TextureImporter)assetImporter;
+            string f = System.IO.Path.GetFileNameWithoutExtension(assetPath);
+            if (f.EndsWith("_N")) t.textureType = TextureImporterType.NormalMap;
+            if (f.EndsWith("_MS")) t.sRGBTexture = false;
+            t.maxTextureSize = 2048;
+            t.mipmapEnabled = true;
+            t.alphaIsTransparency = f.EndsWith("_A");
+            return;
+        }
+        if (assetPath != LabRoomSetup.TexPath) return;
+        var ti = (TextureImporter)assetImporter;
+        ti.maxTextureSize = 8192;
+        ti.textureCompression = TextureImporterCompression.Compressed;
+        ti.mipmapEnabled = true;
+        ti.sRGBTexture = true;
+    }
+}

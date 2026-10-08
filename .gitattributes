@@ -1,0 +1,4 @@
+# Check every file out byte-for-byte as committed: no CRLF conversion on Windows.
+# Unity writes its text assets (scenes, prefabs, .meta) with LF on every platform, and the MR tooling checks that
+# the original LabRoom_Overlay scene is untouched by comparing its SHA-256 (_Backup_BeforeMetaMR/original_scene.sha256).
+* -text

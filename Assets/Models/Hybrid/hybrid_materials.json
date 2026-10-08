@@ -1,0 +1,2005 @@
+{
+ "materials": [
+  {
+   "name": "H_Carpet",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.04,
+   "albedo": "T_carpet.jpg",
+   "normal": "T_carpet_N.png",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_WallPaint",
+   "color": [
+    0.9,
+    0.895,
+    0.88,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.12,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_CeilingTiles",
+   "color": [
+    0.95,
+    0.95,
+    0.95,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.1,
+   "albedo": "T_ceiling.jpg",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_WindowGlass",
+   "color": [
+    0.7,
+    0.8,
+    0.86,
+    0.1
+   ],
+   "metallic": 0.1,
+   "smoothness": 0.96,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Transparent",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_WindowFrame",
+   "color": [
+    0.2,
+    0.25,
+    0.31,
+    1.0
+   ],
+   "metallic": 0.6,
+   "smoothness": 0.5,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_OakLaminate",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.38,
+   "albedo": "T_oak.jpg",
+   "normal": "T_oak_N.png",
+   "normalScale": 0.4,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_DeskFrame_Black",
+   "color": [
+    0.035,
+    0.035,
+    0.04,
+    1.0
+   ],
+   "metallic": 0.5,
+   "smoothness": 0.42,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_WhiteLaminate",
+   "color": [
+    0.92,
+    0.92,
+    0.9,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.45,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_SofaFabric",
+   "color": [
+    0.66,
+    0.64,
+    0.6,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.05,
+   "albedo": "T_fabric.jpg",
+   "normal": "T_fabric_N.png",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_TealFabric",
+   "color": [
+    0.17,
+    0.29,
+    0.34,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.06,
+   "albedo": "T_fabric.jpg",
+   "normal": "T_fabric_N.png",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_MetalDark",
+   "color": [
+    0.06,
+    0.06,
+    0.065,
+    1.0
+   ],
+   "metallic": 0.8,
+   "smoothness": 0.5,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Chrome",
+   "color": [
+    0.85,
+    0.85,
+    0.87,
+    1.0
+   ],
+   "metallic": 1.0,
+   "smoothness": 0.88,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_TV_Body",
+   "color": [
+    0.015,
+    0.015,
+    0.017,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.55,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Screen_Off",
+   "color": [
+    0.008,
+    0.008,
+    0.01,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.93,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Monitor_Body",
+   "color": [
+    0.03,
+    0.03,
+    0.033,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.32,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Monitor_Stand",
+   "color": [
+    0.55,
+    0.56,
+    0.58,
+    1.0
+   ],
+   "metallic": 0.85,
+   "smoothness": 0.6,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Screen_N3",
+   "color": [
+    0.02,
+    0.02,
+    0.02,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.9,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "T_screen_N3.jpg",
+   "emissionColor": [
+    1,
+    1,
+    1
+   ],
+   "emissionIntensity": 0.9,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Screen_E2",
+   "color": [
+    0.02,
+    0.02,
+    0.02,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.9,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "T_screen_E2.jpg",
+   "emissionColor": [
+    1,
+    1,
+    1
+   ],
+   "emissionIntensity": 0.9,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Screen_I1",
+   "color": [
+    0.02,
+    0.02,
+    0.02,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.9,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "T_screen_I1.jpg",
+   "emissionColor": [
+    1,
+    1,
+    1
+   ],
+   "emissionIntensity": 0.9,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Keyboard",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.35,
+   "albedo": "T_keyboard.png",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_PlasticBlack",
+   "color": [
+    0.03,
+    0.03,
+    0.03,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.45,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_LaptopAluminium",
+   "color": [
+    0.5,
+    0.51,
+    0.53,
+    1.0
+   ],
+   "metallic": 0.85,
+   "smoothness": 0.55,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_PC_Case",
+   "color": [
+    0.02,
+    0.02,
+    0.022,
+    1.0
+   ],
+   "metallic": 0.3,
+   "smoothness": 0.45,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_BottleGlass_Green",
+   "color": [
+    0.08,
+    0.22,
+    0.1,
+    0.85
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.95,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Transparent",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_BottleGlass_Brown",
+   "color": [
+    0.22,
+    0.1,
+    0.03,
+    0.85
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.95,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Transparent",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Foil_Gold",
+   "color": [
+    0.8,
+    0.62,
+    0.28,
+    1.0
+   ],
+   "metallic": 1.0,
+   "smoothness": 0.6,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Label_Cream",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.3,
+   "albedo": "T_label_cream.png",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Label_White",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.3,
+   "albedo": "T_label_white.png",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Can_Red",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.7,
+   "smoothness": 0.65,
+   "albedo": "T_can_red.png",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Can_Blue",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.7,
+   "smoothness": 0.65,
+   "albedo": "T_can_blue.png",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Can_Silver",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.7,
+   "smoothness": 0.65,
+   "albedo": "T_can_silver.png",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Aluminium",
+   "color": [
+    0.82,
+    0.82,
+    0.84,
+    1.0
+   ],
+   "metallic": 1.0,
+   "smoothness": 0.7,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Ceramic_White",
+   "color": [
+    0.93,
+    0.93,
+    0.92,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.85,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Ceramic_Black",
+   "color": [
+    0.03,
+    0.03,
+    0.03,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.8,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Lamp_RedGlaze",
+   "color": [
+    0.72,
+    0.05,
+    0.04,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.75,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Lamp_Glow",
+   "color": [
+    1,
+    0.95,
+    0.85,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.2,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    1.0,
+    0.85,
+    0.6
+   ],
+   "emissionIntensity": 2.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_CeilingLight",
+   "color": [
+    1,
+    1,
+    1,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.2,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    1.0,
+    0.97,
+    0.92
+   ],
+   "emissionIntensity": 2.5,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Coat_Dark",
+   "color": [
+    0.08,
+    0.08,
+    0.09,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.1,
+   "albedo": "T_fabric.jpg",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Coat_Grey",
+   "color": [
+    0.32,
+    0.33,
+    0.35,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.1,
+   "albedo": "T_fabric.jpg",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Basket",
+   "color": [
+    0.55,
+    0.4,
+    0.25,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.2,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Box_Kraft",
+   "color": [
+    0.62,
+    0.48,
+    0.32,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.15,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Box_Green",
+   "color": [
+    0.55,
+    0.62,
+    0.25,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.2,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Book_Blue",
+   "color": [
+    0.12,
+    0.2,
+    0.42,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.25,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Book_Red",
+   "color": [
+    0.55,
+    0.12,
+    0.1,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.25,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_Vent",
+   "color": [
+    0.1,
+    0.1,
+    0.11,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.3,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_DecalNPoster",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.55,
+   "albedo": "T_decal_N_poster.jpg",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_DecalNPhotos",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.2,
+   "albedo": "T_decal_N_photos.jpg",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_DecalWWhiteboard",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.7,
+   "albedo": "T_decal_W_whiteboard.jpg",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "H_DecalSSign",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.4,
+   "albedo": "T_decal_S_sign.jpg",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Aloe_Material",
+   "color": [
+    0.0928133949637413,
+    0.030518408864736557,
+    0.001689180382527411,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.5,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Aloe_Material.001",
+   "color": [
+    0.20211441814899445,
+    0.5200414657592773,
+    0.12480751425027847,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.605,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Aloe_Material.002",
+   "color": [
+    0.20211441814899445,
+    0.5200414657592773,
+    0.12480751425027847,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.605,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Aloe_Material.003",
+   "color": [
+    0.20211441814899445,
+    0.5200414657592773,
+    0.12480751425027847,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.605,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Aloe_Material.004",
+   "color": [
+    0.20211441814899445,
+    0.5200414657592773,
+    0.12480751425027847,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.605,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Aloe_Material.005",
+   "color": [
+    0.20211441814899445,
+    0.5200414657592773,
+    0.12480751425027847,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.605,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Aloe_Material.006",
+   "color": [
+    0.20211441814899445,
+    0.5200414657592773,
+    0.12480751425027847,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.605,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Aloe_Material.007",
+   "color": [
+    0.3820815086364746,
+    0.07034455239772797,
+    0.025048816576600075,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.891,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Chair_Fabric_Black",
+   "color": [
+    0.03500000014901161,
+    0.03500000014901161,
+    0.03999999910593033,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.15,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Chair_Fabric_Blue",
+   "color": [
+    0.10000000149011612,
+    0.17000000178813934,
+    0.3199999928474426,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.15,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Chair_Fabric_Grey",
+   "color": [
+    0.30000001192092896,
+    0.3100000023841858,
+    0.33000001311302185,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.15,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Chair_Fabric_White",
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.7799999713897705,
+    1.0
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.15,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Chair_steel",
+   "color": [
+    0.8,
+    0.8,
+    0.82,
+    1
+   ],
+   "metallic": 1.0,
+   "smoothness": 0.8,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "PottedPlant_base",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.25,
+   "albedo": "L_PottedPlant_base_A.png",
+   "normal": "L_PottedPlant_base_N.png",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "PottedPlant_leaves",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.5,
+   "albedo": "L_PottedPlant_leaves_A.png",
+   "normal": "L_PottedPlant_leaves_N.png",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Cutout",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "PottedPlant_wings",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.5,
+   "albedo": "L_PottedPlant_leaves_A.png",
+   "normal": "L_PottedPlant_leaves_N.png",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Fade",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "VaseFlowers_Flowers",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.5,
+   "albedo": "L_VaseFlowers_Flowers_A.png",
+   "normal": "L_VaseFlowers_Flowers_N.png",
+   "normalScale": 1.0,
+   "metallicGloss": "L_VaseFlowers_Flowers_MS.png",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Cutout",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "VaseFlowers_GlassAlpha",
+   "color": [
+    0.85,
+    0.92,
+    0.93,
+    0.18
+   ],
+   "metallic": 0.0,
+   "smoothness": 1.0,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Transparent",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "VaseFlowers_GlassTransmission",
+   "color": [
+    0.85,
+    0.92,
+    0.93,
+    0.18
+   ],
+   "metallic": 0.0,
+   "smoothness": 1.0,
+   "albedo": "",
+   "normal": "",
+   "normalScale": 1.0,
+   "metallicGloss": "",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Transparent",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "WaterBottle_BottleMat",
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.5,
+   "albedo": "L_WaterBottle_BottleMat_A.png",
+   "normal": "L_WaterBottle_BottleMat_N.png",
+   "normalScale": 1.0,
+   "metallicGloss": "L_WaterBottle_BottleMat_MS.png",
+   "occlusion": "",
+   "emission": "",
+   "emissionColor": [
+    0,
+    0,
+    0
+   ],
+   "emissionIntensity": 0.0,
+   "mode": "Opaque",
+   "cutoff": 0.5,
+   "tiling": [
+    1.0,
+    1.0
+   ]
+  }
+ ]
+}
